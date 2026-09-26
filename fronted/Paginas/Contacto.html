@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Monarca</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/styles.css"> 
+    
+    <link rel="stylesheet" href="../css/contacto.css">
+<script src="../js/config.js"></script><script src="../js/tienda.js"></script>
+<link rel="stylesheet" href="../css/tienda-responsive.css">
+</head>
+<body>
+
+    
+    <header class="header">
+        <div class="menu-container">
+            <a href="../index.html" class="logo">
+                <picture>
+                    <source srcset="../img/logo-mobile.png" media="(max-width: 600px)">
+                    <img src="../img/logo-desktop.png" alt="Logo Monarca">
+                </picture>
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir o cerrar menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="Tops.html">Tops</a></li>
+                    <li><a href="Bottoms.html">Bottoms</a></li>
+                    <li><a href="Calzado.html">Calzado</a></li>
+                    <li><a href="Accesorios.html">Accesorios</a></li>
+                    <li><a href="Contacto.html" class="active">Contacto</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="pedidos.html">Mis pedidos</a></li></ul>
+            </nav>
+            <div class="iconos-usuario">
+                <a href="login.html" class="icono-link">
+                    <img src="../img/perfil imagen.png" alt="Mi perfil">
+                </a>
+                
+                
+                <a href="#" class="icono-link contenedor-icono-carrito" id="btn-abrir-carrito-header">
+                    <img src="../img/carrito_imagen.png" alt="carrito de compras">
+                    <span id="cart-count" class="contador-carrito">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="hero-slider">
+            <div class="slider-contenedor" id="slider-contacto">
+                <!-- Imagen 1 -->
+                <div class="slide activa">
+                    <img src="../img/contactanos_img/Portada1_contacto.png" alt="Atención al cliente Monarca 1">
+                    <div class="banner-text">
+                        <h1>Tu opinión<br>importa</h1>
+                    </div>
+                </div>
+                <!-- Imagen 2 -->
+                <div class="slide">
+                    <img src="../img/contactanos_img/Portada2_contacto.png" alt="Atención al cliente Monarca 2">
+                    <div class="banner-text">
+                        <h1>Estamos aquí<br>para ayudarte</h1>
+                    </div>
+                </div>
+                <!-- Imagen 3 -->
+                <div class="slide">
+                    <img src="../img/contactanos_img/Portada3_contacto.png" alt="Atención al cliente Monarca 3">
+                    <div class="banner-text">
+                        <h1>Atención<br>Personalizada</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="seccion-contacto">
+            <div class="titulo-seccion">
+                <h2>CONTÁCTANOS</h2>
+                <hr>
+            </div>
+
+            <div class="contenedor-gris">
+                <div class="contacto-flex">
+                    <!-- Lado Izquierdo: Imagen -->
+                    <div class="contacto-imagen">
+                        <img src="../img/contactanos_img/formulario_contacto.png" alt="Brindanos tu opinión">
+                    </div>
+                    
+                    <!-- Lado Derecho: Formulario -->
+                    <div class="contacto-formulario">
+                        <h3>Bríndanos tu opinión</h3>
+                        <p>Escríbenos tus consultas sobre productos y pedidos.</p><a href="mailto:monarcaoficialpe@gmail.com" class="btn-enviar">Abrir mi aplicación de correo</a><p>Este enlace abre tu correo; el mensaje se envía desde allí.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="seccion-encuentranos">
+            <div class="contenedor-gris">
+                <div class="encuentranos-flex">
+                    <!-- Lado Izquierdo: Información -->
+                    <div class="info-encuentranos">
+                        <h3>ENCUÉNTRANOS</h3>
+                        
+                        <div class="item-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Dirección</strong>
+                                <p>Los Lirios 301, San Juan de Miraflores 15801<br>Lima, Perú.</p>
+                            </div>
+                        </div>
+
+                        <div class="item-info">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <p>+51 904 847 410</p>
+                            </div>
+                        </div>
+
+                        <div class="item-info">
+                            <i class="far fa-envelope"></i>
+                            <div>
+                                <strong>Correo</strong>
+                                <p>Butterfly@monarca.com</p>
+                            </div>
+                        </div>
+
+                        <div class="item-info">
+                            <i class="far fa-clock"></i>
+                            <div>
+                                <strong>Horario de atención</strong>
+                                <p>Lunes a Viernes: 9:00 a.m. – 7:00 p.m.<br>Sábados: 10:00 a.m. – 5:00 p.m.</p>
+                            </div>
+                        </div>
+
+                        <div class="item-info">
+                            <i class="fas fa-truck"></i>
+                            <div>
+                                <strong>Envíos</strong>
+                                <p>Realizamos envíos a todo Lima Metropolitana<br>y a nivel nacional.</p>
+                            </div>
+                        </div>
+
+                        <div class="item-info redes-info">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <strong>Síguenos</strong>
+                                <div class="redes-iconos-contacto">
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="mapa-wrapper">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62406.08741843765!2d-77.0591766513672!3d-12.15448039999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9a6ea353d1d%3A0x9b252dbfbd09d20f!2sFalabella%20Mall%20del%20Sur!5e0!3m2!1ses-419!2spe!4v1783552007187!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>                        <!-- Botón flotante como en el wireframe -->
+                        <a href="https://goo.gl/maps/tu-enlace" target="_blank" class="btn-como-llegar">
+                            <i class="fas fa-expand-arrows-alt"></i> CÓMO LLEGAR
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                
+                <div class="footer-section">
+                    <h4><i class="fas fa-phone"></i> CONTACTO</h4>
+                    <p><strong>912 675 893</strong></p>
+                    <p>monarca_atencion@gmail.com</p>
+                    <br>
+                    <h4>REFERENCIAS</h4>
+                    <div class="referencias">
+                        <a href="https://www.oechsle.pe/" target="_blank">
+                            <img src="../img/oechsle.png" alt="Oechsle" class="logo-ref">
+                        </a>
+                        <a href="https://www.guess.com.pe/" target="_blank">
+                            <img src="../img/guess.png" alt="Guess" class="logo-ref">
+                        </a>
+                        <a href="https://www.falabella.com.pe/falabella-pe" target="_blank">
+                            <img src="../img/falabella.png" alt="Saga Falabella" class="logo-ref">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4><i class="fas fa-envelope"></i> ESCRÍBENOS</h4>
+                    <p>Consulta las novedades en nuestro catálogo.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4><i class="fas fa-book-open"></i> LIBRO DE RECLAMACIONES</h4>
+
+                    
+                    <h4><i class="fas fa-share-alt"></i> NUESTRAS REDES</h4>
+                    <div class="social-links">
+
+
+
+
+                    </div>
+                </div>
+                
+            </div> 
+            <div class="footer-bottom">
+                <p>&copy; 2026 Monarca. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll("#slider-contacto .slide");
+            let slideActual = 0;
+
+            function cambiarSlide() {
+                slides[slideActual].classList.remove("activa");
+                slideActual = (slideActual + 1) % slides.length;
+                slides[slideActual].classList.add("activa");
+            }
+
+            // Cambia de imagen cada 4 segundos
+            setInterval(cambiarSlide, 4000);
+        });
+    </script>
+
+<div id="carrito-overlay" class="carrito-overlay"></div>
+    <div id="panel-carrito" class="panel-carrito">
+        <div class="carrito-header">
+            <h3>Tu carrito</h3>
+            <button id="cerrar-carrito" class="btn-cerrar">&times;</button>
+        </div>
+        <div id="carrito-items" class="carrito-items"></div>
+        <div class="carrito-footer">
+            <div class="resumen-fila"><span>Subtotal</span><span id="carrito-subtotal">S/ 0.00</span></div>
+            <div class="resumen-fila" id="fila-descuento" style="display: none; color: #d9534f;">
+                <span>Descuento Fiestas Patrias</span><span id="check-descuento">- S/ 0.00</span>
+            </div>
+            <div class="resumen-fila"><span>Envío</span><span id="carrito-envio">S/ 10.00</span></div>
+            <hr class="linea-divisora">
+            <div class="resumen-fila total"><span>Total</span><span id="carrito-total">S/ 0.00</span></div>
+            <button class="btn-finalizar" id="btn-finalizar-compra">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+
+    <script src="../js/carrito.js"></script>
+
+</body>
+</html>

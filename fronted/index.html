@@ -1,0 +1,217 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monarca | Tienda de ropa y accesorios</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="icon" href="img/mariposa.png">
+<script src="js/config.js"></script><script src="js/tienda.js"></script>
+<link rel="stylesheet" href="css/tienda-responsive.css">
+</head>
+<body>
+<header class="header">
+        <div class="menu-container">
+            
+            <a href="#" class="logo">
+                <picture>
+                    <source srcset="img/logo-mobile.png" media="(max-width: 600px)">
+                    <img src="img/logo-desktop.png" alt="Logo Monarca">
+                </picture>
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir o cerrar menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="Paginas/Tops.html">Tops</a></li>
+                    <li><a href="Paginas/Bottoms.html">Bottoms</a></li>
+                    <li><a href="Paginas/Calzado.html">Calzado</a></li>
+                    <li><a href="Paginas/Accesorios.html">Accesorios</a></li>
+                    <li><a href="Paginas/Contacto.html">Contacto</a></li>
+                    <li><a href="Paginas/Nosotros.html">Nosotros</a></li>
+                <li><a href="Paginas/pedidos.html">Mis pedidos</a></li></ul>
+            </nav>
+         <div class="iconos-usuario">
+    <a href="Paginas/login.html" class="icono-link" id="link-perfil" aria-label="Mi cuenta">
+        <img src="img/perfil imagen.png" alt="Mi perfil">
+    </a>
+    
+    <a href="#" class="icono-link contenedor-icono-carrito" id="btn-abrir-carrito-header">
+        <img src="img/carrito_imagen.png" alt="carrito de compras">
+        <span id="cart-count" class="contador-carrito">0</span>
+    </a>
+</div>
+        </div>
+    </header>
+
+<!-- Hero Section -->
+    <section class="portada" id="inicio">
+        <img src="img/portada.png" alt="Portada Monarca" class="hero-image">
+        <div class="portada-texto">
+            <h1>Encuentra <br><span>tu</span> <br>estilo.</h1>
+        </div>
+    </section>
+
+    <!-- Envíos -->
+    <div class="envios">
+        <i class="fas fa-truck"></i>
+        ENVIOS A NIVEL NACIONAL
+    </div>
+
+    <!-- Descripción -->
+    <section class="descripcion container">
+        <div class="descripcion-texto">
+            <h2>SOMOS MONARCA</h2>
+            <p>Para la mujer que nunca se detiene, llega Monarca. 
+            Somos una empresa online de moda femenina que ofrece ropa, calzado y accesorios
+            diseñados para adaptarse a diferentes estilos y ocasiones. 
+            Nuestro catálogo combina prendas actuales, versátiles y de calidad, pensadas para
+            crear outfits completos en un solo lugar. 
+            Nos enfocamos en brindar variedad, tendencia y una experiencia de compra práctica y accesible.
+            </p>
+        </div>
+        <img src="img/descripcion.jpg" alt="Modelo descripción" class="descripcion-image">
+    </section>
+
+    <!-- Enfoque de clientes -->
+    <section class="descripcion container">
+        <div class="descripcion-texto">
+            <h2>ENFOQUE DE CLIENTES</h2>
+            <p>Nos dirigimos a mujeres jóvenes que buscan expresar su estilo a través de la moda, 
+                combinando tendencias con comodidad y accesibilidad. 
+                Pensamos en quienes prefieren comprar online de forma rápida y sencilla, valorando 
+                la variedad, los buenos precios y la posibilidad de encontrar todo lo que necesitan en un solo lugar.
+                En Monarca, celebramos tu libertad de ser tú misma en cada detalle.
+            </p>
+        </div>
+        <img src="img/enfoque.png" alt="Modelo descripción" class="descripcion-image">
+    </section>
+
+<section class="mision-vision-container">
+    <div class="tarjeta-mv mision">
+        <img src="img/mision.jpg" alt="Misión">
+        <h3 class="titulo-mv">MISIÓN</h3>
+        <p class="texto-mv">Vestir la libertad de las mujeres con prendas versátiles que combinan comodidad y estilo, acompañándola en cada faceta de su vida.</p>
+    </div>
+
+    <div class="tarjeta-mv vision">
+        <img src="img/vision.jpg" alt="Visión">
+        <h3 class="titulo-mv">VISIÓN</h3>
+        <p class="texto-mv">Ser la marca líder en moda online que inspire la metamorfosis femenina, convirtiéndonos en el aliado esencial de su guardarropa a través de la autenticidad y el diseño.</p>
+    </div>
+</section>
+
+<hr class="separador-monarca">
+<div class="titulo-seccion">
+    <h2>NUEVA COLECCIÓN</h2>
+    <p>La esencia Monarca en movimiento</p>
+</div>
+<section class="video-portada">
+    <video class="video-pc" autoplay loop muted playsinline>
+        <source src="img/video_horizontal.mp4" type="video/mp4">
+    </video>
+
+    <video class="video-movil" controls playsinline>
+        <source src="img/video_vertical.mp4" type="video/mp4">
+    </video>
+</section>
+
+    <!-- Productos Recomendados -->
+    <section class="productos container" id="productos">
+        <h2>PRODUCTOS RECOMENDADOS</h2>
+        <div class="productos-grid"></div>
+    </section>
+<hr class="separador-monarca">
+
+    <!-- Nuevo Ingreso -->
+    <section class="nuevo-ingreso">
+        <img src="img/nuevo_ingreso.png" alt="Sandalia Mary" class="nuevo-image">
+        <div class="nuevo-ingreso-texto">
+            <div class="nuevo-badge">¡Nuevo ingreso!</div>
+            <h2>SANDALIA MARY</h2>
+            <a href="Paginas/Calzado.html" class="btn-comprar">COMPRAR AHORA</a>
+        </div>
+    </section>
+
+<footer class="footer" id="contacto">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h4><i class="fas fa-phone"></i> CONTACTO</h4>
+                <p><strong>912 675 893</strong></p>
+                <p>monarca_atencion@gmail.com</p>
+                <br>
+                <h4>REFERENCIAS</h4>
+                <div class="referencias">
+                    <a href="https://www.oechsle.pe/" target="_blank">
+                        <img src="img/oechsle.png" alt="Oechsle" class="logo-ref">
+                    </a>
+                    <a href="https://www.guess.com.pe/" target="_blank">
+                        <img src="img/guess.png" alt="Guess" class="logo-ref">
+                    </a>
+                    <a href="https://www.falabella.com.pe/falabella-pe" target="_blank">
+                        <img src="img/falabella.png" alt="Saga Falabella" class="logo-ref">
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4><i class="fas fa-envelope"></i> ESCRÍBENOS</h4>
+                <p>Consulta las novedades en nuestro catálogo.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4><i class="fas fa-book-open"></i> LIBRO DE RECLAMACIONES</h4>
+
+                
+                <h4><i class="fas fa-share-alt"></i> NUESTRAS REDES</h4>
+                <div class="social-links">
+
+
+
+
+                </div>
+            </div>
+            
+        </div> 
+        <div class="footer-bottom">
+            <p>&copy; 2026 Monarca. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <div id="carrito-overlay" class="carrito-overlay"></div>
+    <div id="panel-carrito" class="panel-carrito">
+        <div class="carrito-header">
+            <h3>Tu carrito</h3>
+            <button id="cerrar-carrito" class="btn-cerrar">&times;</button>
+        </div>
+        <div id="carrito-items" class="carrito-items"></div>
+        <div class="carrito-footer">
+            <div class="resumen-fila"><span>Subtotal</span><span id="carrito-subtotal">S/ 0.00</span></div>
+            <div class="resumen-fila" id="fila-descuento" style="display: none; color: #d9534f;">
+                <span>Descuento Fiestas Patrias</span><span id="check-descuento">- S/ 0.00</span>
+            </div>
+            <div class="resumen-fila"><span>Envío</span><span id="carrito-envio">S/ 10.00</span></div>
+            <hr class="linea-divisora">
+            <div class="resumen-fila total"><span>Total</span><span id="carrito-total">S/ 0.00</span></div>
+            <button class="btn-finalizar" id="btn-finalizar-compra">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+<script src="js/sesion.js"></script>
+
+    <script src="js/carrito.js"></script>
+<script src="js/catalogo.js"></script>
+</body> 
+</html>

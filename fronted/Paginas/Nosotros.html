@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | Monarca</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/nosotros.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="../img/mariposa.png">
+<script src="../js/config.js"></script><script src="../js/tienda.js"></script>
+<link rel="stylesheet" href="../css/tienda-responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu-container">
+            <a href="../index.html" class="logo">
+                <picture>
+                    <source srcset="../img/logo-mobile.png" media="(max-width: 600px)">
+                    <img src="../img/logo-desktop.png" alt="Logo Monarca">
+                </picture>
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir o cerrar menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="Tops.html">Tops</a></li>
+                    <li><a href="Bottoms.html">Bottoms</a></li>
+                    <li><a href="Calzado.html">Calzado</a></li>
+                    <li><a href="Accesorios.html">Accesorios</a></li>
+                    <li><a href="Contacto.html" class="active">Contacto</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="pedidos.html">Mis pedidos</a></li></ul>
+            </nav>
+             <div class="iconos-usuario">
+                <a href="login.html" class="icono-link">
+                    <img src="../img/perfil imagen.png" alt="Mi perfil">
+                </a>
+                
+                <!-- Ícono del carrito -->
+                <a href="#" class="icono-link contenedor-icono-carrito" id="btn-abrir-carrito-header">
+                    <img src="../img/carrito_imagen.png" alt="carrito de compras">
+                    <span id="cart-count" class="contador-carrito">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+<!-- Portada Nosotros -->
+    <section class="portada" id="portada-nosotros">
+        <!-- Asegúrate de tener una imagen llamada portada_nosotros.jpg o cambia la ruta -->
+        <img src="../img/Nosotros_img/portada_nosotros.png" alt="Equipo Monarca" class="hero-image" style="filter: brightness(0.6);">
+        <div class="portada-texto texto-centrado">
+            <h1>Conoce al <br><span>equipo</span> <br>detrás de la marca.</h1>
+        </div>
+    </section>
+
+<!-- CONTENIDO PRINCIPAL DE NOSOTROS -->
+    <main class="container" style="margin-top: 60px; margin-bottom: 60px;">
+        
+        <div class="titulo-seccion">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>La estructura de nuestro éxito</p>
+        </div>
+
+        <!-- Mapa Organizacional (Estilo Mapa Conceptual) -->
+        <section class="nosotros-seccion">
+            <h2 class="subtitulo-nosotros">MAPA ORGANIZACIONAL</h2>
+            <div class="mapa-conceptual-container">
+                <div class="tree">
+                    <ul>
+                        <li>
+                            <div class="tarjeta-nodo principal">
+                                <h4>Josue Gonzales</h4>
+                                <span>COORDINADOR / JS</span>
+                                <p>Supervisión, Desarrollo JS y Aprobación Final</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="tarjeta-nodo">
+                                        <h4>Luz Grandez</h4>
+                                        <span>HTML</span>
+                                        <p>Wireframes y Mapa de Sitio</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tarjeta-nodo">
+                                        <h4>Chavez Villegas Diego Alexander</h4>
+                                        <span>HTML</span>
+                                        <p>Maquetación y QA de Texto</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tarjeta-nodo">
+                                        <h4>Ian Arturo Callirgos Huamán</h4>
+                                        <span>CSS</span>
+                                        <p>Estilos y Media Queries</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tarjeta-nodo">
+                                        <h4>Jordy espinoza </h4>
+                                        <span>CSS</span>
+                                        <p>Estilos y Media Queries</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="descripcion container" style="margin-bottom: 80px; margin-top: 40px;">
+            <!-- Asegúrate de tener esta foto en tu carpeta img -->
+            <img src="../img/Nosotros_img/modelo.png" alt="Mujer vistiendo ropa Monarca" class="descripcion-image">
+            
+            <div class="descripcion-texto">
+                <h2>SOMOS MONARCA</h2>
+                <p>
+                    Para la mujer que nunca se detiene, llega Monarca. Somos una empresa online de moda femenina que ofrece ropa, calzado y accesorios diseñados para adaptarse a diferentes estilos y ocasiones. 
+                </p>
+                <p style="margin-top: 15px;">
+                    Nuestro catálogo combina prendas actuales, versátiles y de calidad, pensadas para crear outfits completos en un solo lugar. Nos enfocamos en brindar variedad, tendencia y una experiencia de compra práctica y accesible.
+                </p>
+            </div>
+        </section>
+
+        <!-- Misión y Visión Restaurada -->
+        <section class="nosotros-seccion">
+            <div class="mision-vision-container">
+                <div class="tarjeta-mv mision">
+                    <img src="../img/mision.jpg" alt="Misión">
+                    <h3 class="titulo-mv">MISIÓN</h3>
+                    <p class="texto-mv">Vestir la libertad de las mujeres con prendas versátiles que combinan comodidad y estilo, acompañándola en cada faceta de su vida.</p>
+                </div>
+
+                <div class="tarjeta-mv vision">
+                    <img src="../img/vision.jpg" alt="Visión">
+                    <h3 class="titulo-mv">VISIÓN</h3>
+                    <p class="texto-mv">Ser la marca líder en moda online que inspire la metamorfosis femenina, convirtiéndonos en el aliado esencial de su guardarropa a través de la autenticidad y el diseño.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nuestros Valores -->
+        <section class="nosotros-seccion">
+            <h2 class="subtitulo-nosotros" style="text-align: center;">NUESTROS VALORES</h2>
+            <div class="valores-grid">
+                <div class="valor-item">
+                    <i class="fas fa-users"></i>
+                    <h4>Centrado en las personas</h4>
+                </div>
+                <div class="valor-item">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Orientación al cliente</h4>
+                </div>
+                <div class="valor-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Desarrollo sostenible</h4>
+                </div>
+                <div class="valor-item">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Innovación</h4>
+                </div>
+                <div class="valor-item">
+                    <i class="fas fa-balance-scale"></i>
+                    <h4>Integridad</h4>
+                </div>
+            </div>
+        </section>
+
+        <hr class="separador-monarca">
+<!-- CV Integrantes (Diseño Tarjetas Verticales) -->
+        <section class="nosotros-seccion">
+            <div class="titulo-seccion" style="padding-top: 0;">
+                <h2>C.V. INTEGRANTES</h2>
+                <p style="color: #888; font-size: 14px; margin-top: 5px;">Conoce al equipo y abre el CV completo de cada integrante.</p>
+            </div>
+<div class="cv-grid-horizontal">
+                
+                <!-- Integrante 1 -->
+                <div class="cv-card-vertical">
+                    <div class="cv-photo-container">
+                        <!-- Reemplaza src con la ruta de la foto real -->
+                        <img src="../img/Nosotros_img/josue.jpeg" alt="Josue Gonzales" class="cv-photo-round">
+                        <div class="cv-icon-badge"><i class="fas fa-code"></i></div>
+                    </div>
+                    <h3>Josue Gonzales</h3>
+                    <div class="cv-skills-vertical">
+                        <span class="skill-badge-v">Liderazgo</span>
+                        <span class="skill-badge-v">Resolución de problemas</span>
+                        <span class="skill-badge-v">Orientación al cliente</span>
+                    </div>
+                </div>
+
+                <!-- Integrante 2 -->
+                <div class="cv-card-vertical">
+                    <div class="cv-photo-container">
+                        <img src="../img/Nosotros_img/Luz.png" alt="Luz Grandez" class="cv-photo-round">
+                        <div class="cv-icon-badge"><i class="fas fa-pen-nib"></i></div>
+                    </div>
+                    <h3>Luz Grandez</h3>
+                    <div class="cv-skills-vertical">
+                        <span class="skill-badge-v">Creatividad</span>
+                        <span class="skill-badge-v">Empatía</span>
+                        <span class="skill-badge-v">Gestión del tiempo</span>
+                    </div>
+                    <span>Presentación del equipo</span>
+                </div>
+   
+</section>
+
+             <section class="nuevo-ingreso" style="margin-bottom: 60px;">
+            <!-- Te sugiero colocar aquí una foto representativa (ej. un equipo trabajando, bocetos o telas) -->
+            <img src="../img/Nosotros_img/Juntos.jpg" alt="Organización del Equipo Monarca" class="nuevo-image" style="object-position: center;">
+            
+            <div class="nuevo-ingreso-texto">
+                <div class="nuevo-badge">ORGANIZACIÓN</div>
+                <h2 style="font-size: 32px; margin-bottom: 15px;">MATRIZ DE TAREAS</h2>
+                <p style="color: #555555; margin-bottom: 30px; font-size: 16px; line-height: 1.6; max-width: 80%;">
+                    Conoce la asignación de actividades y roles de cada integrante de nuestro equipo de desarrollo.
+                </p>
+                <!-- Utilizamos la misma clase del botón negro, pero con la función onclick -->
+                <button class="btn-comprar" onclick="abrirMatriz()" style="cursor: pointer;">VISUALIZAR MATRIZ</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="modalMatriz" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="cerrarMatriz()">&times;</span>
+            <img src="../img/Nosotros_img/Matriz de responsabilidad.png" alt="Matriz de Responsabilidad del equipo Monarca">
+        </div>
+    </div>
+
+  <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                
+                <div class="footer-section">
+                    <h4><i class="fas fa-phone"></i> CONTACTO</h4>
+                    <p><strong>912 675 893</strong></p>
+                    <p>monarca_atencion@gmail.com</p>
+                    <br>
+                    <h4>REFERENCIAS</h4>
+                    <div class="referencias">
+                        <a href="https://www.oechsle.pe/" target="_blank">
+                            <img src="../img/oechsle.png" alt="Oechsle" class="logo-ref">
+                        </a>
+                        <a href="https://www.guess.com.pe/" target="_blank">
+                            <img src="../img/guess.png" alt="Guess" class="logo-ref">
+                        </a>
+                        <a href="https://www.falabella.com.pe/falabella-pe" target="_blank">
+                            <img src="../img/falabella.png" alt="Saga Falabella" class="logo-ref">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4><i class="fas fa-envelope"></i> ESCRÍBENOS</h4>
+                    <p>Consulta las novedades en nuestro catálogo.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4><i class="fas fa-book-open"></i> LIBRO DE RECLAMACIONES</h4>
+
+                    
+                    <h4><i class="fas fa-share-alt"></i> NUESTRAS REDES</h4>
+                    <div class="social-links">
+
+
+
+
+                    </div>
+                </div>
+                
+            </div> 
+            <div class="footer-bottom">
+                <p>&copy; 2026 Monarca. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const modal = document.getElementById("modalMatriz");
+        function abrirMatriz() { modal.style.display = "flex"; }
+        function cerrarMatriz() { modal.style.display = "none"; }
+        window.onclick = function(event) {
+            if (event.target == modal) { modal.style.display = "none"; }
+        }
+    </script>
+    
+<div id="carrito-overlay" class="carrito-overlay"></div>
+    <div id="panel-carrito" class="panel-carrito">
+        <div class="carrito-header">
+            <h3>Tu carrito</h3>
+            <button id="cerrar-carrito" class="btn-cerrar">&times;</button>
+        </div>
+        <div id="carrito-items" class="carrito-items"></div>
+        <div class="carrito-footer">
+            <div class="resumen-fila"><span>Subtotal</span><span id="carrito-subtotal">S/ 0.00</span></div>
+            <div class="resumen-fila" id="fila-descuento" style="display: none; color: #d9534f;">
+                <span>Descuento Fiestas Patrias</span><span id="check-descuento">- S/ 0.00</span>
+            </div>
+            <div class="resumen-fila"><span>Envío</span><span id="carrito-envio">S/ 10.00</span></div>
+            <hr class="linea-divisora">
+            <div class="resumen-fila total"><span>Total</span><span id="carrito-total">S/ 0.00</span></div>
+            <button class="btn-finalizar" id="btn-finalizar-compra">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+
+    <script src="../js/carrito.js"></script>
+
+</body>
+</html>

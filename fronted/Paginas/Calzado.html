@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calzado | Monarca Tienda de ropa y accesorios</title>
+    <link rel="stylesheet" href="../css/calzadostyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="../img/mariposa.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="../js/config.js"></script><script src="../js/tienda.js"></script>
+<link rel="stylesheet" href="../css/tienda-responsive.css">
+</head>
+<body>
+  <header class="header">
+        <div class="menu-container">
+            <a href="../index.html" class="logo">
+                <picture>
+                    <source srcset="../img/logo-mobile.png" media="(max-width: 600px)">
+                    <img src="../img/logo-desktop.png" alt="Logo Monarca">
+                </picture>
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir o cerrar menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="Tops.html">Tops</a></li>
+                    <li><a href="Bottoms.html">Bottoms</a></li>
+                    <li><a href="Calzado.html">Calzado</a></li>
+                    <li><a href="Accesorios.html">Accesorios</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="pedidos.html">Mis pedidos</a></li></ul>
+            </nav>
+           <div class="iconos-usuario">
+    <a href="login.html" class="icono-link" id="link-perfil" aria-label="Mi cuenta">
+        <img src="../img/perfil imagen.png" alt="Mi perfil">
+    </a>
+    
+    <a href="#" class="icono-link contenedor-icono-carrito" id="btn-abrir-carrito-header">
+        <img src="../img/carrito_imagen.png" alt="carrito de compras">
+        <span id="cart-count" class="contador-carrito">0</span>
+    </a>
+</div>
+        </div>
+    </header>
+
+<section class="hero-slider">
+
+    <div id="carouselCalzado" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/portada_calzados/portada_calzado_3.png" class="d-block w-100" alt="Calzado Monarca 1">
+                <div class="banner-text">
+                    <h1>Nuestro<br>Calzado<br>Monarca.</h1>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="../img/portada_calzados/portada_calzado_2.png" class="d-block w-100" alt="Calzado Monarca 2">
+                <div class="banner-text">
+                    <h1>Pasos<br>Llenos de<br>Elegancia.</h1>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="../img/portada_calzados/portada_calzado_1.png" class="d-block w-100" alt="Calzado Monarca 3">
+                <div class="banner-text">
+                    <h1>Comodidad<br>que inspira<br>Lujo.</h1>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCalzado" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselCalzado" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+
+    <div class="titulo-seccion-tops">
+        <h2>CALZADO</h2>
+        <hr>
+    </div>
+
+<main class="contenedor-principal container">
+        
+        <aside class="sidebar-filtros">
+            <div class="filtro-grupo buscador-container">
+                <input type="text" id="buscador-productos" placeholder="Buscar producto...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="filtro-grupo">
+                <div class="filtro-item">
+                    <span>Tipo de producto</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="filtro-opciones">
+                    <label><input type="checkbox" value="tacon"> Tacones</label>
+                    <label><input type="checkbox" value="sandalia"> Sandalias</label>
+                </div>
+            </div>
+
+            <div class="filtro-grupo">
+                <div class="filtro-item">
+                    <span>Color</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="filtro-opciones">
+                    <label><input type="checkbox" value="negro"> Negro</label>
+                    <label><input type="checkbox" value="blanco"> Blanco</label>
+                    <label><input type="checkbox" value="marron"> Marrón / Tierra</label>
+                    <label><input type="checkbox" value="vino"> Rojo / Vino</label>
+                    <label><input type="checkbox" value="dorado"> Dorado / Joya</label>
+                </div>
+            </div>
+
+            <div class="filtro-grupo">
+                <div class="filtro-item">
+                    <span>Talla</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="filtro-opciones">
+                    <label><input type="checkbox" value="36"> 36</label>
+                    <label><input type="checkbox" value="37"> 37</label>
+                    <label><input type="checkbox" value="38"> 38</label>
+                    <label><input type="checkbox" value="39"> 39</label>
+                </div>
+            </div>
+
+            <div class="filtro-grupo">
+                <div class="filtro-item">
+                    <span>Precio</span>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="filtro-opciones">
+                    <label><input type="checkbox" value="bajo"> Menos de S/ 400</label>
+                    <label><input type="checkbox" value="alto"> S/ 400 a más</label>
+                </div>
+            </div>
+        </aside>
+
+        <section class="grid-productos" id="contenedor-productos" data-categoria="Calzado" data-limite-precio="400">
+            </section>
+
+    </main>
+
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-phone"></i> CONTACTO</h4>
+                    <p><strong>912 675 893</strong></p>
+                    <p>monarca_atencion@gmail.com</p>
+                    <br>
+                    <h4>REFERENCIAS</h4>
+                    <div class="referencias">
+                        <a href="https://www.oechsle.pe/" target="_blank"><img src="../img/oechsle.png" alt="Oechsle" class="logo-ref"></a>
+                        <a href="https://www.guess.com.pe/" target="_blank"><img src="../img/guess.png" alt="Guess" class="logo-ref"></a>
+                        <a href="https://www.falabella.com.pe/falabella-pe" target="_blank"><img src="../img/falabella.png" alt="Saga Falabella" class="logo-ref"></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4><i class="fas fa-envelope"></i> ESCRÍBENOS</h4>
+                    <p>Consulta las novedades en nuestro catálogo.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4><i class="fas fa-book-open"></i> LIBRO DE RECLAMACIONES</h4>
+
+                    <h4><i class="fas fa-share-alt"></i> NUESTRAS REDES</h4>
+                    <div class="social-links">
+
+
+
+
+                    </div>
+                </div>
+            </div> 
+            <div class="footer-bottom">
+                <p>&copy; 2026 Monarca. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/catalogo.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <div id="carrito-overlay" class="carrito-overlay"></div>
+    <div id="panel-carrito" class="panel-carrito">
+        <div class="carrito-header">
+            <h3>Tu carrito</h3>
+            <button id="cerrar-carrito" class="btn-cerrar">&times;</button>
+        </div>
+        <div id="carrito-items" class="carrito-items"></div>
+        <div class="carrito-footer">
+            <div class="resumen-fila"><span>Subtotal</span><span id="carrito-subtotal">S/ 0.00</span></div>
+            <div class="resumen-fila" id="fila-descuento" style="display: none; color: #d9534f;">
+                <span>Descuento Fiestas Patrias</span><span id="check-descuento">- S/ 0.00</span>
+            </div>
+            <div class="resumen-fila"><span>Envío</span><span id="carrito-envio">S/ 10.00</span></div>
+            <hr class="linea-divisora">
+            <div class="resumen-fila total"><span>Total</span><span id="carrito-total">S/ 0.00</span></div>
+            <button class="btn-finalizar" id="btn-finalizar-compra">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+<script src="../js/sesion.js"></script>
+
+    <script src="../js/carrito.js"></script>
+</body>
+</html>

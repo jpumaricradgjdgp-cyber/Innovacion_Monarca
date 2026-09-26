@@ -1,0 +1,164 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    /* Fondo gris claro para que la tarjeta blanca resalte */
+    background-color: #fcfcfc; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Tarjeta principal */
+.login-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02); /* Sombra casi invisible */
+}
+
+/* Textos superiores */
+.cabecera-login {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.logo-monarca {
+    max-width: 140px; /* Ajusta según el tamaño de tu logo real */
+    margin-bottom: 15px;
+}
+.cabecera-login h2 {
+    font-size: 22px;
+    color: #111;
+    margin-bottom: 8px;
+}
+.subtitulo {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Inputs y Labels */
+.grupo-input {
+    margin-bottom: 20px;
+}
+.grupo-input label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 8px;
+}
+.contenedor-icono {
+    position: relative;
+}
+.contenedor-icono input {
+    width: 100%;
+    padding: 12px 40px; /* Espacio para los íconos */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.contenedor-icono input:focus {
+    border-color: #111; /* Borde oscuro al escribir */
+}
+
+/* Posición de los íconos */
+.icono-izq {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 14px;
+}
+.icono-der {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Botones */
+.btn-negro {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+.btn-negro:hover {
+    background-color: #222;
+}
+
+/* Línea separadora con la "o" */
+.separador {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    color: #888;
+    font-size: 12px;
+}
+.separador::before,
+.separador::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #ddd;
+}
+.separador span {
+    margin: 0 10px;
+}
+
+.btn-blanco {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    background-color: #fff;
+    color: #111;
+    border: 1px solid #ddd;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.btn-blanco:hover {
+    background-color: #f9f9f9;
+}
+/* Registro y ayuda de acceso: misma tarjeta y paleta del login. */
+[hidden] { display: none !important; }
+body { min-height: 100vh; height: auto; padding: 24px 16px; }
+.login-container { width: 100%; max-width: 420px; }
+.cabecera-login h1 { font-size: 22px; color: #111; margin-bottom: 8px; }
+.grupo-input > input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; }
+.grupo-input > input:focus { outline: 2px solid #333; outline-offset: 2px; }
+.acciones-cuenta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; margin-top: 22px; font-size: 14px; }
+.acciones-cuenta a { color: #333; text-underline-offset: 3px; }
+.mensaje-cuenta { padding: 12px; margin-bottom: 20px; background: #eef7ee; color: #235223; border-radius: 6px; font-size: 14px; line-height: 1.5; }
+.mensaje-cuenta.error { background: #fff1f1; color: #8b2323; }
+.ayuda { font-size: 12px; color: #666; margin-top: 8px; }
+.instrucciones { font-size: 14px; line-height: 1.6; margin-bottom: 18px; color: #444; }
+.enlace-boton { display: block; text-align: center; text-decoration: none; }
+.mostrar-clave { border: 0; background: transparent; padding: 6px; right: 6px; }
+.btn-negro:disabled { opacity: .6; cursor: wait; }
+@media (max-width: 480px) { .login-card { padding: 28px 20px; } }

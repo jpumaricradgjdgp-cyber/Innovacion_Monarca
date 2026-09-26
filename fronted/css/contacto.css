@@ -1,0 +1,460 @@
+/* =========================================
+   ESTILOS GENERALES Y SLIDER
+   ========================================= */
+main {
+    background-color: #fcfcfc; /* Fondo general muy claro */
+    padding-bottom: 50px;
+}
+
+.hero-slider {
+    width: 100%;
+    height: 60vh; /* Altura del banner principal */
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-contenedor {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.activa {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); /* Oscurece un poco la imagen para que el texto resalte */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+}
+
+.banner-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* =========================================
+   TÍTULO DE SECCIÓN
+   ========================================= */
+.titulo-seccion {
+    text-align: center;
+    margin: 60px 0 30px;
+}
+
+.titulo-seccion h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.titulo-seccion hr {
+    width: 60px;
+    border: 1px solid #000;
+    margin: 0 auto;
+}
+
+/* =========================================
+   CONTENEDORES GRISES (Base para formularios y mapas)
+   ========================================= */
+.contenedor-gris {
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    background-color: #f4f4f4; /* Fondo gris claro del wireframe */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* =========================================
+   SECCIÓN: CONTÁCTANOS (FORMULARIO)
+   ========================================= */
+.contacto-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacto-imagen {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contacto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contacto-formulario {
+    flex: 1;
+    min-width: 300px;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacto-formulario h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.fila-form {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.fila-form input {
+    flex: 1;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.contacto-formulario input:focus,
+.contacto-formulario textarea:focus {
+    border-color: #000;
+}
+
+.btn-enviar {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #333;
+}
+
+/* =========================================
+   SECCIÓN: ENCUÉNTRANOS (MAPA)
+   ========================================= */
+.encuentranos-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-encuentranos {
+    flex: 1;
+    min-width: 300px;
+    padding: 40px 50px;
+}
+
+.info-encuentranos h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.item-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.item-info i {
+    font-size: 1.2rem;
+    color: #000;
+    margin-top: 4px;
+}
+
+.item-info strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.item-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+.redes-iconos-contacto {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.redes-iconos-contacto a {
+    color: #000;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.redes-iconos-contacto a:hover {
+    color: #666;
+}
+
+/* Lado del Mapa */
+.mapa-wrapper {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    min-height: 400px; /* Asegura que el mapa tenga altura en mobile */
+}
+
+.btn-como-llegar {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    color: #000;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+
+.btn-como-llegar:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .fila-form {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .contacto-formulario input {
+        margin-bottom: 20px;
+    }
+    
+    .banner-text h1 {
+        font-size: 2.5rem;
+    }
+}
+/* ===============================
+   FONDO GRIS OSCURO (TODA LA PANTALLA)
+   =============================== */
+.carrito-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Color negro con 60% de opacidad: esto oscurece la página principal */
+    background: rgba(0, 0, 0, 0.6); 
+    
+    /* Eliminamos el difuminado */
+    backdrop-filter: none; 
+    
+    opacity: 0; 
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 9998;
+}
+
+/* Esta clase se activa con JS para mostrar el fondo */
+.carrito-overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===============================
+   PANEL LATERAL
+   =============================== */
+.panel-carrito {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Oculto inicialmente */
+    width: 380px;
+    height: 100vh;
+    
+    /* Blanco sólido, nada transparente */
+    background-color: #ffffff; 
+    
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    z-index: 9999; /* Asegura que esté por encima del overlay */
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+}
+
+.panel-carrito.activo {
+    right: 0; /* Aparece desde la derecha */
+}
+
+/* Cabecera del carrito */
+.carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+.carrito-header h3 {
+    margin: 0; font-size: 20px; font-weight: bold;
+}
+.btn-cerrar {
+    background: none; border: none;
+    font-size: 28px; cursor: pointer;
+}
+
+/* Área central (Scrollable) */
+.carrito-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* Diseño de cada producto en el carrito */
+.carrito-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+.carrito-item img {
+    width: 80px; height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.carrito-item-info {
+    margin-left: 15px;
+    flex: 1;
+}
+.carrito-item-header {
+    display: flex; justify-content: space-between; align-items: start;
+}
+.carrito-item-header h4 {
+    margin: 0 0 5px 0; font-size: 15px; font-weight: normal;
+}
+.talla-txt {
+    margin: 0; font-size: 13px; color: #666;
+}
+.precio-txt {
+    margin: 5px 0 10px 0; font-weight: bold; font-size: 14px;
+}
+
+/* Controles de cantidad: [ - ] [ 1 ] [ + ] */
+.controles-cantidad {
+    display: inline-flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.controles-cantidad button {
+    background: transparent; border: none;
+    width: 25px; height: 25px;
+    cursor: pointer; font-size: 14px;
+}
+.controles-cantidad span {
+    width: 30px; text-align: center;
+    line-height: 25px; border-left: 1px solid #ccc; border-right: 1px solid #ccc;
+    font-size: 13px;
+}
+
+/* Pie del carrito (Resumen) */
+.carrito-footer {
+    padding: 20px;
+    background: #fdfdfd;
+    border-top: 1px solid #eee;
+}
+.resumen-fila {
+    display: flex; justify-content: space-between;
+    margin-bottom: 10px; font-size: 14px; color: #444;
+}
+.linea-divisora {
+    border: none; border-top: 1px solid #ddd; margin: 15px 0;
+}
+.resumen-fila.total {
+    font-size: 18px; font-weight: bold; color: #000;
+}
+.btn-finalizar {
+    width: 100%; padding: 15px; background: #1a1a1a; color: #fff;
+    border: none; font-weight: bold; font-size: 14px; cursor: pointer;
+    margin-top: 15px; border-radius: 4px; transition: background 0.2s;
+}
+.btn-finalizar:hover {
+    background: #000;
+}
+/* ===============================
+   ESTILOS DEL ÍCONO DEL CARRITO
+   =============================== */
+.contenedor-icono-carrito {
+    position: relative; 
+    display: inline-block;
+    /* Asegura que el contenedor abraze exactamente a la imagen sin espacios extra */
+    line-height: 0; 
+}
+
+/* Opcional: Ajusta el alto de tu imagen si lo necesitas */
+.contenedor-icono-carrito img {
+    height: 55px; /* Ajusta a la altura que prefieras */
+    width: auto;
+    min-width: 65px; /* Obliga a que no baje de este tamaño */
+    flex-shrink: 0; /* Evita que los contenedores flex lo aplasten */
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -6px;   /* Ajusta para que sobresalga por arriba */
+    right: -8px; /* Ajusta para que quede en la pura esquina */
+    
+    /* Colores similares a tu diseño */
+    background-color: #df4b4b; 
+    color: white;
+    
+    /* Tipografía clara para el número */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    
+    /* Flexbox para hacer un círculo perfecto con el número exacto al medio */
+    width: 22px; 
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
+    /* La sombra suave que se ve en tus imágenes */
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.3);
+}

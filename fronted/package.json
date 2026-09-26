@@ -1,0 +1,11 @@
+{
+  "name": "monarca-fronted",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node tests/login.cjs && node tests/flujo.cjs && node tests/sistema.cjs && node tests/galeria.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.58.2"
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Monarca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/topstyle.css"> 
+    <link rel="icon" href="../img/mariposa.png">
+<script src="../js/config.js"></script><script src="../js/tienda.js"></script>
+<link rel="stylesheet" href="../css/tienda-responsive.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="menu-container">
+            <a href="../index.html" class="logo">
+                <picture>
+                    <source srcset="../img/logo-mobile.png" media="(max-width: 600px)">
+                    <img src="../img/logo-desktop.png" alt="Logo Monarca">
+                </picture>
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir o cerrar menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="Tops.html">Tops</a></li>
+                    <li><a href="Bottoms.html">Bottoms</a></li>
+                    <li><a href="Calzado.html">Calzado</a></li>
+                    <li><a href="Accesorios.html">Accesorios</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="pedidos.html">Mis pedidos</a></li></ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="checkout-main container">
+        <div class="checkout-titulo">
+            <h2>Finalizar Compra</h2>
+            <hr>
+        </div>
+
+        <div class="checkout-grid">
+            <div class="checkout-formularios">
+                <form id="form-checkout">
+                    <div class="seccion-checkout">
+                        <h3>1. Datos Personales</h3>
+                        <div class="fila-form">
+                            <input type="text" id="nombre" placeholder="Nombres completos" required>
+                            <input type="text" id="apellidos" placeholder="Apellidos" required>
+                        </div>
+                        <div class="fila-form">
+                            <input type="email" id="correo" placeholder="Correo electrónico" required>
+                            <input type="tel" id="telefono" placeholder="Teléfono / Celular" required>
+                        </div>
+                        <input type="text" id="dni" placeholder="DNI o CE" required>
+                    </div>
+
+                    <div class="seccion-checkout">
+                        <h3>2. Dirección de Envío</h3>
+                        <input type="text" id="direccion" placeholder="Dirección completa (Calle, Av., Nro)" required>
+                        <div class="fila-form">
+                            <select id="distrito" required>
+                                <option value="" disabled selected>Selecciona tu distrito...</option>
+                                <option value="surco">Santiago de Surco</option>
+                                <option value="miraflores">Miraflores</option>
+                                <option value="sanisidro">San Isidro</option>
+                                <option value="sjm">San Juan de Miraflores</option>
+                                <option value="ves">Villa El Salvador</option>
+                                <option value="otro">Otro distrito</option>
+                            </select>
+                            <input type="text" id="referencia" placeholder="Referencia (opcional)">
+                        </div>
+                    </div>
+
+                    <div class="seccion-checkout">
+                        <h3>3. Método de Pago</h3>
+                        <div class="opciones-pago"><p>Cargando métodos de pago...</p>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-pagar">CONFIRMAR PEDIDO</button>
+                </form>
+            </div>
+
+            <div class="checkout-resumen">
+                <div class="resumen-caja">
+                    <h3>Resumen del Pedido</h3>
+                    
+                    <div id="checkout-items" class="checkout-lista-items">
+                        </div>
+
+                    <div class="resumen-totales">
+                        <div class="fila-total">
+                            <span>Subtotal</span>
+                            <span id="check-subtotal">S/ 0.00</span>
+                        </div>
+                        <div class="fila-total" id="fila-descuento" style="display: none; color: #d9534f;">
+                            <span>Descuento Fiestas Patrias</span>
+                            <span id="check-descuento">- S/ 0.00</span>
+                        </div>
+                        <div class="fila-total">
+                            <span>Costo de Envío</span>
+                            <span id="check-envio">S/ 0.00</span>
+                        </div>
+                        <hr>
+                        <div class="fila-total gran-total">
+                            <span>Total a Pagar</span>
+                            <span id="check-total">S/ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Monarca. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/carrito.js"></script>
+<script src="../js/checkout.js"></script>
+</body>
+</html>

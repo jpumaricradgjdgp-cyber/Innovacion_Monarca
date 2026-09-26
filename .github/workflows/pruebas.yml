@@ -1,0 +1,62 @@
+name: Pruebas Monarca
+on: [push, pull_request]
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - run: chmod +x mvnw && ./mvnw -B test
+        working-directory: backend
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: fronted/package-lock.json
+      - run: npm ci
+        working-directory: fronted
+      - run: npx playwright install --with-deps chromium
+        working-directory: fronted
+      - run: npm test
+        working-directory: fronted
+  postgres:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: monarca_test
+          POSTGRES_USER: monarca_test
+          POSTGRES_PASSWORD: solo-ci-base-aislada
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U monarca_test"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Crear esquema de pruebas vacío
+        env:
+          PGPASSWORD: solo-ci-base-aislada
+        run: psql -h localhost -U monarca_test -d monarca_test -v ON_ERROR_STOP=1 -f backend/db/001_esquema_nuevo.sql
+      - name: Pruebas contra PostgreSQL aislado
+        working-directory: backend
+        run: >-
+          chmod +x mvnw && ./mvnw -B test
+          -Dspring.datasource.url=jdbc:postgresql://localhost:5432/monarca_test
+          -Dspring.datasource.driver-class-name=org.postgresql.Driver
+          -Dspring.datasource.username=monarca_test
+          -Dspring.datasource.password=solo-ci-base-aislada
+          -Dspring.jpa.hibernate.ddl-auto=validate

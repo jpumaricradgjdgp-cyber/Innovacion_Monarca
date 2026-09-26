@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almacén - Monarca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/gestion.css">
+    <style>
+        /* ESTILOS DEL ADMIN PANEL (Basado en el wireframe) */
+        body { font-family: Arial, sans-serif; background-color: #f8f9fa; margin: 0; padding: 0; color: #333; }
+        .admin-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: white; border-bottom: 1px solid #ddd; }
+        .admin-header h1 { font-size: 1.2rem; margin: 0; }
+        .admin-header span { font-size: 0.85rem; color: #666; }
+        .user-info { display: flex; align-items: center; gap: 10px; font-weight: bold; }
+        
+        .container { padding: 30px; max-width: 1400px; margin: 0 auto; }
+        
+        /* Sección de Gestión */
+        .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; }
+        .btn-add { background: #1a1a1a; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        
+        .search-bar { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        
+        /* Tabla */
+        .table-container { background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th, td { padding: 15px; border-bottom: 1px solid #eee; }
+        th { font-size: 0.9rem; color: #555; }
+        td img { width: 50px; height: 60px; object-fit: cover; border-radius: 4px; }
+        .btn-accion { background: white; border: 1px solid #ddd; padding: 6px 12px; border-radius: 4px; cursor: pointer; margin-right: 5px; font-size: 0.85rem; }
+        
+        /* Reportes */
+        .report-section { margin-top: 40px; }
+        .charts-container { display: flex; gap: 20px; margin-top: 20px; }
+        .chart-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); flex: 1; }
+        .chart-card h3 { margin-top: 0; margin-bottom: 5px; font-size: 1.1rem; }
+        .chart-card p { font-size: 0.85rem; color: #777; margin-bottom: 20px; }
+
+        /* Modal CRUD */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; }
+        .modal-content { background: white; padding: 30px; border-radius: 8px; width: 400px; }
+        .modal input, .modal select { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .btn-save { background: #1a1a1a; color: white; border: none; padding: 10px; width: 100%; border-radius: 4px; cursor: pointer; }
+    </style>
+<script src="../js/config.js"></script><script src="../js/tienda.js"></script>
+<link rel="stylesheet" href="../css/tienda-responsive.css">
+</head>
+<body data-admin="true">
+
+    <header class="admin-header">
+        <div>
+            <h1>Almacén</h1><a href="../index.html">Volver a la tienda</a><a href="pedidos.html">Mis pedidos</a>
+            <span>Gestiona tu inventario y reportes</span>
+        </div>
+        <div class="user-info" id="info-admin">
+            <i class="far fa-user-circle" style="font-size: 1.5rem;"></i> Administrador 
+        </div>
+        <button type="button" id="salir-admin">Cerrar sesión</button>
+    </header>
+
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 style="margin: 0 0 5px 0;">Gestión de Productos</h2>
+                <span style="color: #666; font-size: 0.9rem;">Registra, consulta y administra los productos del almacén.</span>
+            </div>
+            <button class="btn-add" onclick="abrirModal()">+ Registrar Producto</button>
+        </div>
+
+        <p id="mensaje-gestion" class="mensaje-gestion" role="status"></p><input type="text" id="buscador" class="search-bar" placeholder="🔍 Buscar por nombre de la prenda...">
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre de la Prenda</th>
+                        <th>Categoría</th>
+                        <th>Talla</th>
+                        <th>Precio (S/)</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-body">
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="paginador"><button id="inventario-anterior">Anterior</button><span id="inventario-pagina"></span><button id="inventario-siguiente">Siguiente</button></div><div id="reporte-estados"></div><div class="report-section">
+            <h2 style="margin: 0;">Reportes Generales</h2>
+            <div class="charts-container">
+                
+                <div class="chart-card">
+                    <h3>Clientes que realizaron compras</h3>
+                    <p>Cantidad de clientes por mes</p>
+                    <div id="reporte-meses"></div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Categorías más vendidas</h3>
+                    <p>Solo pedidos con pago confirmado</p>
+                    <div id="reporte-categorias"></div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="admin-seccion" style="margin-top: 40px;">
+            <h2 style="margin-bottom: 5px;">Gestión de pedidos</h2>
+            <span style="color: #666; font-size: 0.9rem;">Consulta entregas, verifica pagos y gestiona estados.</span>
+            
+            <table class="tabla-admin" style="width: 100%; border-collapse: collapse; margin-top: 15px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background-color: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;">
+                        <th style="padding: 12px;">ID Pedido</th>
+                        <th style="padding: 12px;">Fecha</th>
+                        <th style="padding: 12px;">Cliente</th>
+                        <th style="padding: 12px;">Total</th>
+                        <th style="padding: 12px;">Estado</th><th>Detalle</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-ventas">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+<div class="container"><div class="paginador"><button id="pedidos-anterior">Anterior</button><span id="pedidos-pagina"></span><button id="pedidos-siguiente">Siguiente</button></div><section id="detalle-pedido" hidden aria-live="polite"></section></div>
+    <div id="modalCRUD" class="modal">
+        <div class="modal-content">
+            <h3 id="modal-titulo">Nuevo Producto</h3>
+            <form id="form-producto">
+                <input type="hidden" id="prod-id">
+                <p id="ayuda-formulario" class="ayuda-campo"></p><p id="error-producto" role="alert" hidden></p>
+                <div id="selector-variante" hidden><label for="prod-variante">Variante que quieres corregir</label><select id="prod-variante" aria-label="Variante a editar" hidden></select><p class="ayuda-campo">Selecciona una combinación guardada para cambiar su talla, color o precio. También se muestran las variantes inactivas y sin stock.</p></div>
+                <fieldset id="datos-generales"><legend>1. Datos del producto</legend>
+                <label for="prod-nombre">Nombre del producto</label><input type="text" id="prod-nombre" maxlength="150" placeholder="Nombre de la Prenda" required>
+                <label for="prod-descripcion">Descripción del producto</label><textarea id="prod-descripcion" maxlength="5000" rows="4" placeholder="Material, corte, cuidados y detalles de la prenda"></textarea><label for="prod-categoria">Categoría</label><select id="prod-categoria" required>
+                    <option value="Tops">Tops</option>
+                    <option value="Bottoms">Bottoms</option>
+                    <option value="Calzado">Calzado</option>
+                    <option value="Accesorios">Accesorios</option>
+                </select>
+                <label for="prod-precio-base">Precio base del producto (S/)</label><input type="number" id="prod-precio-base" min="0" step="0.01" placeholder="Ejemplo: 49.90" required><p class="ayuda-campo">Precio que aparece en el catálogo. Cada talla y color puede tener su propio precio.</p></fieldset>
+                <fieldset id="datos-variante"><legend>2. Talla, color y existencias</legend><p class="ayuda-campo">Una variante es una sola talla y un solo color. Ejemplo: talla S, color Negro, 5 unidades. Para M y L, usa «Añadir variante» por separado.</p>
+                <label for="prod-talla">Talla (solo una)</label><input type="text" id="prod-talla" maxlength="20" list="tallas-sugeridas" aria-describedby="ayuda-talla" placeholder="Ejemplo: S" required><datalist id="tallas-sugeridas"><option value="XS"><option value="S"><option value="M"><option value="L"><option value="XL"><option value="XXL"><option value="ÚNICA"></datalist><p id="ayuda-talla" class="ayuda-campo">Escribe una talla. No escribas S-M-L ni varias tallas juntas. Si guardaste una así, reemplázala por una talla y revisa cuántas unidades le corresponden.</p>
+                <label for="prod-color">Color de esta talla</label><input type="text" id="prod-color" maxlength="50" placeholder="Color de esta variante" required>
+
+                <label for="prod-precio">Precio de esta variante (S/)</label><input type="number" min="0" id="prod-precio" step="0.01" placeholder="Precio de la variante (S/)" required>
+                <div id="stock-inicial"><label for="prod-stock">Unidades disponibles de esta talla y color</label><input type="number" id="prod-stock" min="0" step="1" placeholder="Ejemplo: 5" required><p class="ayuda-campo">Cuenta únicamente las unidades de esta combinación. Con 0 unidades no se podrá elegir para comprar.</p></div>
+                <div id="ajuste-stock" hidden><p id="stock-actual"></p><label for="stock-cambio">Cantidad que quieres añadir o retirar</label><input id="stock-cambio" type="number" step="1" placeholder="Ajuste: +5 entrada, -2 salida"><p class="ayuda-campo">Ejemplo: +5 añade cinco unidades; -2 retira dos. Este ajuste se guarda con su propio botón.</p><button type="button" id="guardar-ajuste">Aplicar ajuste de stock</button><button type="button" id="estado-variante">Desactivar variante</button></div><p class="ayuda-campo">Para comprar, el producto y la variante deben estar activos y tener stock mayor que cero.</p></fieldset><section id="editor-fotos"><h4>3. Fotos del producto</h4><p>Selecciona hasta 8 fotos JPG o PNG. Máximo 5 MB cada una. La primera será la portada.</p><label class="selector-fotos" for="prod-archivos">Seleccionar fotos de mi computadora</label><input id="prod-archivos" type="file" accept="image/jpeg,image/png" multiple><div id="galeria-editor"></div><p id="estado-fotos" role="status"></p><details><summary>Añadir una foto que ya tiene URL</summary><label for="prod-img">Dirección HTTPS de la foto</label><input type="url" pattern="https://.*" id="prod-img" placeholder="https://…"><button type="button" id="agregar-url">Añadir a la galería</button></details></section>
+                
+                <button type="submit" class="btn-save">Guardar Producto</button>
+                <button type="button" style="width: 100%; padding: 10px; margin-top: 10px; border: none; cursor:pointer;" onclick="cerrarModal()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+<script src="../js/galeria-admin.js"></script><script src="../js/admin.js"></script><script src="../js/pedidos.js"></script>
+</body>
+</html>

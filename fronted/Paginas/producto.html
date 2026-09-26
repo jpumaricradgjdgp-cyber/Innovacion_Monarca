@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Producto | Monarca</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="../img/mariposa.png">
+<script src="../js/config.js"></script><script src="../js/tienda.js"></script>
+<link rel="stylesheet" href="../css/tienda-responsive.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="menu-container">
+            <a href="../index.html" class="logo">
+                <picture>
+                    <source srcset="../img/logo-mobile.png" media="(max-width: 600px)">
+                    <img src="../img/logo-desktop.png" alt="Logo Monarca">
+                </picture>
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon" aria-label="Abrir o cerrar menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="Tops.html">Tops</a></li>
+                    <li><a href="Bottoms.html">Bottoms</a></li>
+                    <li><a href="Calzado.html">Calzado</a></li>
+                    <li><a href="Accesorios.html">Accesorios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="pedidos.html">Mis pedidos</a></li></ul>
+            </nav>
+            <div class="iconos-usuario">
+                <a href="login.html" class="icono-link"><img src="../img/perfil imagen.png" alt="Mi perfil"></a>
+<a href="#" class="icono-link contenedor-icono-carrito" id="btn-abrir-carrito-header">
+    <img src="../img/carrito_imagen.png" alt="carrito de compras">
+    <span id="cart-count" class="contador-carrito">0</span>
+</a>            </div>
+        </div>
+    </header>
+
+    <main class="contenedor-principal container" style="padding: 60px 20px; min-height: 60vh;">
+        <div class="producto-detalle-grid" style="display: flex; gap: 50px; flex-wrap: wrap; align-items: flex-start; max-width: 1000px; margin: 0 auto;">
+            
+            <div class="producto-imagen" style="flex: 1; min-width: 300px; text-align: center;">
+                <img id="img-principal" src="" alt="Cargando producto..." style="width: 100%; max-width: 500px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); object-fit: cover;">
+            </div>
+
+            <div class="producto-info-detalle" style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
+                
+                <p id="prod-categoria" style="color: #666; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; margin-bottom: 10px;">Categoría</p>
+                <h1 id="prod-titulo" style="font-size: 36px; margin-bottom: 15px; font-family: 'Playfair Display', serif; color: #1a1a1a;">Cargando...</h1>
+                <p id="prod-precio" style="font-size: 28px; font-weight: bold; color: #8b0000; margin-bottom: 25px;">S/ 0.00</p>
+                
+                <p id="prod-descripcion" style="line-height: 1.7; color: #444; margin-bottom: 35px; font-size: 16px;">
+                    Descripción del producto cargando...
+                </p>
+
+                <div class="seleccion-talla" style="margin-bottom: 35px;">
+                    <h4 style="margin-bottom: 15px; font-size: 16px; color: #1a1a1a;">Selecciona talla y color:</h4>
+                    <div id="contenedor-tallas" style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        </div>
+                </div>
+
+                <button class="btn-agregar" style="width: 100%; padding: 18px; background-color: #1a1a1a; color: #fff; border: none; cursor: pointer; font-size: 16px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; transition: background 0.3s;">
+                    AGREGAR AL CARRITO
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                
+                <div class="footer-section">
+                    <h4><i class="fas fa-phone"></i> CONTACTO</h4>
+                    <p><strong>912 675 893</strong></p>
+                    <p>monarca_atencion@gmail.com</p>
+                    <br>
+                    <h4>REFERENCIAS</h4>
+                    <div class="referencias">
+                        <a href="https://www.oechsle.pe/" target="_blank">
+                            <img src="../img/oechsle.png" alt="Oechsle" class="logo-ref">
+                        </a>
+                        <a href="https://www.guess.com.pe/" target="_blank">
+                            <img src="../img/guess.png" alt="Guess" class="logo-ref">
+                        </a>
+                        <a href="https://www.falabella.com.pe/falabella-pe" target="_blank">
+                            <img src="../img/falabella.png" alt="Saga Falabella" class="logo-ref">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4><i class="fas fa-envelope"></i> ESCRÍBENOS</h4>
+                    <p>Consulta las novedades en nuestro catálogo.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4><i class="fas fa-book-open"></i> LIBRO DE RECLAMACIONES</h4>
+
+                    
+                    <h4><i class="fas fa-share-alt"></i> NUESTRAS REDES</h4>
+                    <div class="social-links">
+
+
+
+
+                    </div>
+                </div>
+                
+            </div> 
+            <div class="footer-bottom">
+                <p>&copy; 2026 Monarca. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+<div id="carrito-overlay" class="carrito-overlay"></div>
+    <div id="panel-carrito" class="panel-carrito">
+        <div class="carrito-header">
+            <h3>Tu carrito</h3>
+            <button id="cerrar-carrito" class="btn-cerrar">&times;</button>
+        </div>
+        <div id="carrito-items" class="carrito-items"></div>
+        <div class="carrito-footer">
+            <div class="resumen-fila"><span>Subtotal</span><span id="carrito-subtotal">S/ 0.00</span></div>
+            <div class="resumen-fila"><span>Envío</span><span id="carrito-envio">S/ 10.00</span></div>
+            <hr class="linea-divisora">
+            <div class="resumen-fila total"><span>Total</span><span id="carrito-total">S/ 0.00</span></div>
+            <button class="btn-finalizar" id="btn-finalizar-compra">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+
+    <script src="../js/carrito.js"></script>
+    <script src="../js/producto.js"></script>
+    <script src="../js/sesion.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mis pedidos | Monarca</title><link rel="stylesheet" href="../css/gestion.css">
+<script src="../js/config.js"></script><script src="../js/tienda.js"></script><link rel="stylesheet" href="../css/tienda-responsive.css">
+</head>
+<body><header><a href="../index.html">MONARCA · Volver a la tienda</a><a href="login.html">Mi cuenta</a></header>
+<main><h1>Mis pedidos</h1><p>Consulta tus compras y cancela los pedidos pendientes de pago que ya no necesites.</p>
+<div class="tabla-scroll"><table><thead><tr><th>Pedido</th><th>Fecha</th><th>Cliente</th><th>Total</th><th>Estado</th><th>Detalle</th></tr></thead><tbody id="tabla-ventas"></tbody></table></div>
+<div class="paginador"><button id="pedidos-anterior">Anterior</button><span id="pedidos-pagina"></span><button id="pedidos-siguiente">Siguiente</button></div>
+<section id="detalle-pedido" hidden aria-live="polite"></section></main><script src="../js/pedidos.js"></script></body></html>
